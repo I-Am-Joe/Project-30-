@@ -123,17 +123,3 @@ function keyCode(){
     slingshot.attach(Hexagon.body);
   }
 }
-function getTime(){
-  var response = await fetch("http://worldtimeapi.org/api/timezone/America/Toronto");
-  var responseJSON = await response.response.json();
-  var dateTime=responseJSON.dateTime;
-  var hour = dateTime.slice(11,13);
-
-  if(hour>=0600 && hour<=1900){
-    background(0);
-}
-else{
-    background(255);
-}
-  console.log(responseJSON);
-}
